@@ -1,0 +1,326 @@
+.container {
+  position: relative;
+  height: auto;
+  width: 500px;
+}
+
+h2 {
+  color: #FFFFFF;
+}
+
+#methodOptions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.radio-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.method-option {
+  color: #FFFFFF;
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #333;
+}
+
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label {
+  display: block;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 80px;
+  margin: 10px auto;
+  height: 30px;
+  z-index: 9;
+  cursor: pointer;
+  transition: all 0.25s linear;
+  -webkit-transition: all 0.25s linear;
+}
+
+ul li:hover label {
+  color: #FFFFFF;
+}
+
+.check {
+  display: block;
+  position: absolute;
+  border: 5px solid #AAAAAA;
+  border-radius: 100%;
+  height: 20px;
+  width: 20px;
+  top: 35px;
+  left: 25px;
+  z-index: 5;
+  transition: border 0.25s linear;
+  -webkit-transition: border 0.25s linear;
+}
+
+.method-option:hover .check {
+  border: 5px solid #1DB95499;
+}
+
+.method-option .check::before {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 100%;
+  height: 10px;
+  width: 10px;
+  top: 5px;
+  left: 5px;
+  margin: auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+  border: 5px solid #1DB954;
+}
+
+input[type=radio]:checked ~ .check::before {
+  background: #1DB954;
+}
+
+input[type=radio]:checked ~ label {
+  color: #1DB954;
+}
+
+.method-question {
+  display: flex;
+  flex-direction: column;
+}
+
+.next-button-wrapper {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.logged-in {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+}
+
+.user-dropdown {
+  align-self: flex-end;
+}
+
+.MuiFormLabel-colorPrimary.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+  color: white;
+}
+
+.MuiSelect-iconStandard.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  color: white;
+}
+
+.user-select.css-88nv5c-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border: none;
+}
+
+.user-select.css-88nv5c-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
+  border: none;
+}
+
+.user-select.css-88nv5c-MuiInputBase-root-MuiInput-root-MuiSelect-root:hover:not(.Mui-disabled):before {
+  border: none;
+}
+
+.MuiFormLabel-colorPrimary.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root:focus {
+  color: white;
+}
+
+.MuiInputLabel-shrink.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: white;
+}
+
+.logout-link {
+  text-decoration: none;
+  color: white;
+}
+
+.MuiAlert-standard.css-1gg23ms-MuiPaper-root-MuiAlert-root {
+  text-align: left;
+}
+
+.form-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  height: 30px;
+}
+
+.form-prompt {
+  text-align: left;
+  font-size: 32px;
+}
+
+.MuiList-root.css-h4y409-MuiList-root {
+  max-height: 500px;
+  border: 1px solid white;
+  overflow: auto;
+}
+
+.MuiAvatar-circular.css-1wlk0hk-MuiAvatar-root {
+  border-radius: 0;
+  height: 70px;
+  width: 70px;
+  margin-right: 20px;
+}
+
+.MuiListItemText-primary.css-10hburv-MuiTypography-root {
+  font-size: 20px;
+}
+
+.url-wrapper {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.url-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.url-text {
+  margin-right: 10px;
+}
+
+.repeat-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.repeat-box p {
+  margin-right: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1DB954;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #191414;
+}
+
+.playlist-question {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.playlist-dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.playlist-dropdown:last-child {
+  margin-bottom: 0;
+}
+
+.button-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.MuiInputLabel-shrink.MuiInputLabel-outlined.Mui-focused {
+  color: white;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiOutlinedInput-input {
+  color: white;
+}
+
+.playlist-select.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root .MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline:hover {
+  border: 2px solid #1DB954;
+}
+.playlist-select.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root .MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline:focus {
+  border: 2px solid #1DB954;
+}
+.playlist-select.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root .MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 2px solid white;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background-color: #191414;
+  color: white;
+  height: 350px;
+  overflow: auto;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("../../fonts/PlusJakartaSans-Bold.ttf");
+}
+@font-face {
+  font-family: "PlusJakartaSansLight";
+  src: url("../../fonts/PlusJakartaSans-ExtraLight.ttf");
+  font-size: 8px;
+}
+body, html {
+  margin: 0;
+  max-width: 105%;
+  height: auto;
+  min-height: auto;
+  font-family: "PlusJakartaSans", sans-serif;
+}
+
+.root {
+  overflow: scroll;
+}
+
+#mainApp {
+  background-color: "#191414";
+  display: "flex";
+  flex-direction: "column";
+  min-height: "100vh";
+}
+
+/*# sourceMappingURL=styles.css.map */

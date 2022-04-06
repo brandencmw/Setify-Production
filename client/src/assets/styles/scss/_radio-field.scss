@@ -1,0 +1,117 @@
+$main_green: #1DB954;
+$main_green_hover: #1DB95499;
+$main_white: #FFFFFF;
+
+  
+.container{
+    position: relative;
+    height: auto;
+    width: 500px;
+}
+
+h2 {
+    color: $main_white;
+}
+
+#methodOptions{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.radio-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.method-option {
+    color: $main_white;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #333;
+}
+
+input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+}
+
+ul li label{
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 25px 25px 25px 80px;
+    margin: 10px auto;
+    height: 30px;
+    z-index: 9;
+    cursor: pointer;
+    transition: all 0.25s linear;;
+    -webkit-transition: all 0.25s linear;
+}
+
+ul li:hover label{
+    color: #FFFFFF;
+}
+
+.check{
+    display: block;
+    position: absolute;
+    border: 5px solid #AAAAAA;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    top: 35px;
+    left: 25px;
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+
+.method-option:hover .check {
+    border: 5px solid $main_green_hover;
+}
+
+.method-option .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 10px;
+    width: 10px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+    border: 5px solid $main_green;
+}
+
+input[type=radio]:checked ~ .check::before{
+    background: $main_green;
+}
+
+input[type=radio]:checked ~ label{
+    color: $main_green;
+}
+
+.method-question {
+    display: flex;
+    flex-direction: column;
+}
+
+.next-button-wrapper {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}

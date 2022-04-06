@@ -1,0 +1,50 @@
+.logged-in {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.user-dropdown {
+    align-self: flex-end;
+}
+
+.MuiFormLabel-colorPrimary.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+    color: white;
+}
+
+.MuiSelect-iconStandard.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+    color: white;
+}
+
+.user-select.css-88nv5c-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+    border: none;
+}
+
+.user-select.css-88nv5c-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
+    border: none;
+}
+
+
+.user-select.css-88nv5c-MuiInputBase-root-MuiInput-root-MuiSelect-root:hover:not(.Mui-disabled):before {
+    border: none;
+}
+
+.MuiFormLabel-colorPrimary.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root:focus {
+    color: white;
+}
+
+.MuiInputLabel-shrink.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: white;
+}
+
+.logout-link {
+    text-decoration: none;
+    color: white;
+}
+
+.MuiAlert-standard.css-1gg23ms-MuiPaper-root-MuiAlert-root {
+    text-align: left;
+}

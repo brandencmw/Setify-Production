@@ -1,0 +1,72 @@
+.MuiList-root.css-h4y409-MuiList-root {
+    max-height: 500px;
+    border: 1px solid white;
+    overflow: auto;
+}
+
+.MuiAvatar-circular.css-1wlk0hk-MuiAvatar-root {
+    border-radius: 0;
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+}
+
+.MuiListItemText-primary.css-10hburv-MuiTypography-root {
+    font-size: 20px;
+}
+
+.url-wrapper {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.url-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.url-text {
+    margin-right: 10px;
+}
+
+.repeat-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.repeat-box p {
+    margin-right: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    width: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1DB954; 
+    border-radius: 10px;
+   
+  }
+
+  ::-webkit-scrollbar-track-piece {
+      background-color: #191414;
+      
+  }
+
