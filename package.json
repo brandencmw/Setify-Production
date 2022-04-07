@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/brandencmw/Setify-Production/issues"
   },
-  "homepage": "https://github.com/brandencmw/Setify-Production#readme"
+  "homepage": "https://github.com/brandencmw/Setify-Production#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0"
+  }
 }
