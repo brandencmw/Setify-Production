@@ -27,6 +27,7 @@
   "homepage": "https://github.com/brandencmw/Setify-Production#readme",
   "dependencies": {
     "concurrently": "^7.1.0",
+    "dotenv": "^16.0.0",
     "uuid": "^8.3.2"
   }
 }
