@@ -16,7 +16,7 @@ const spotifyCredentials = {
 const spotifyAPI = new SpotifyWebAPI(spotifyCredentials);
 console.log(spotifyAPI);
 
-app.use(express.static(__dirname + "./client/build"));
+app.use(express.static(__dirname + "/client/build"));
 app.use(express.json());
 app.use(cors());
 app.use(express.static("public"));
@@ -38,7 +38,7 @@ interface TrackType {
 }
 
 app.get("/", (req: any, res: any) => {
-  res.sendFile(__dirname + "./client/build/index.html");
+  res.sendFile(__dirname + "/client/build/index.html");
 });
 
 app.get("/login", (req: any, res: any) => {
