@@ -1,8 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dab41509.css",
-    "main.js": "/static/js/main.8d8bd941.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
+    "main.js": "/static/js/main.9a7979e2.js",
     "static/media/PlusJakartaSans-Bold.ttf": "/static/media/PlusJakartaSans-Bold.669b6c5749b91789cee5.ttf",
     "static/media/PlusJakartaSans-ExtraLight.ttf": "/static/media/PlusJakartaSans-ExtraLight.9fa24a4450c3307f58da.ttf",
     "static/media/SpotifyLogo.svg": "/static/media/SpotifyLogo.505fdd13586dac4c841d52e5ed02d977.svg",
@@ -13,11 +12,10 @@
     "static/media/NextIcon.svg": "/static/media/NextIcon.b70977b173bbecab618e79aa1b69b803.svg",
     "static/media/RightArrow.svg": "/static/media/RightArrow.b70977b173bbecab618e79aa1b69b803.svg",
     "main.dab41509.css.map": "/static/css/main.dab41509.css.map",
-    "main.8d8bd941.js.map": "/static/js/main.8d8bd941.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.9a7979e2.js.map": "/static/js/main.9a7979e2.js.map"
   },
   "entrypoints": [
     "static/css/main.dab41509.css",
-    "static/js/main.8d8bd941.js"
+    "static/js/main.9a7979e2.js"
   ]
 }
