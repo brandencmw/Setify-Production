@@ -16,7 +16,7 @@ const cors = require("cors");
 const app = express();
 // Spotify API config
 const SpotifyWebAPI = require("spotify-web-api-node");
-const redirectURI = "http://localhost:5000/callback";
+const redirectURI = "https://setify-merger.herokuapp.com/callback";
 const spotifyCredentials = {
     clientId: process.env.SPOTIFY_ID,
     clientSecret: process.env.SPOTIFY_SECRET,
@@ -69,7 +69,7 @@ app.get("/callback", (req, res) => {
             console.log("access_token:", access_token);
             spotifyAPI.setAccessToken(access_token);
         }), (expires_in / 2) * 1000);
-        res.redirect(`http://localhost:3000/?token=${data.body["access_token"]}&refresh_token=${data.body["refresh_token"]}`);
+        res.redirect(`https://setify-merger.herokuapp.com/?token=${data.body["access_token"]}&refresh_token=${data.body["refresh_token"]}`);
     })
         .catch((err) => {
         console.error("Error getting Tokens:", err);
