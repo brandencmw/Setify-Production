@@ -1,9 +1,4 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
+import React from 'react';
 function FormButton(props) {
     if (props.iconLoc === 'left') {
         return (<div className='form-button' onClick={props.onClick} id={`button${props.buttonID}`}>
@@ -18,4 +13,4 @@ function FormButton(props) {
             </div>);
     }
 }
-exports.default = FormButton;
+export default FormButton;

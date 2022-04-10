@@ -1,19 +1,14 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
-const MethodQuestion_1 = __importDefault(require("./methodquestion/MethodQuestion"));
-const PlaylistQuestion_1 = __importDefault(require("./playlistquestion/PlaylistQuestion"));
-const ErrorPopup_1 = __importDefault(require("../../ErrorPopup"));
+import React from "react";
+import MethodQuestion from "./methodquestion/MethodQuestion";
+import PlaylistQuestion from "./playlistquestion/PlaylistQuestion";
+import ErrorPopup from "../../ErrorPopup";
 function PaginatedForm(props) {
-    const [pageNum, setPageNum] = react_1.default.useState(1);
-    const [formData, setFormData] = react_1.default.useState({
+    const [pageNum, setPageNum] = React.useState(1);
+    const [formData, setFormData] = React.useState({
         method: '',
         playlists: [],
     });
-    const [error, setError] = react_1.default.useState(false);
+    const [error, setError] = React.useState(false);
     function handleSubmit(event) {
         event.preventDefault();
         let target = event.target;
@@ -96,21 +91,21 @@ function PaginatedForm(props) {
     }
     function renderPage() {
         if (pageNum === 1) {
-            return (<MethodQuestion_1.default onNext={handleNext} onChange={onChange} formData={formData}/>);
+            return (<MethodQuestion onNext={handleNext} onChange={onChange} formData={formData}/>);
         }
         else if (pageNum === 2) {
-            return (<PlaylistQuestion_1.default user={props.user} onMerge={onMerge} onPrev={handlePrev} onChange={onChange} formData={formData}/>);
+            return (<PlaylistQuestion user={props.user} onMerge={onMerge} onPrev={handlePrev} onChange={onChange} formData={formData}/>);
         }
     }
     function closeError() {
         setError(false);
     }
     return (<div>
-            <ErrorPopup_1.default open={error} onClose={closeError} text='There was a problem submitting the form, please check your inputs'/>
+            <ErrorPopup open={error} onClose={closeError} text='There was a problem submitting the form, please check your inputs'/>
             <form className="container" onSubmit={handleSubmit} id='mergeForm'>
                 {renderPage()}
                 <button style={{ display: 'none' }} type="submit" id="submitButton"></button>
             </form>
         </div>);
 }
-exports.default = PaginatedForm;
+export default PaginatedForm;

@@ -1,24 +1,19 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
-const axios_1 = __importDefault(require("axios"));
-const PaginatedForm_1 = __importDefault(require("./paginatedform/PaginatedForm"));
-const UserDropdown_1 = __importDefault(require("./UserDropdown"));
-const ResultSuccess_1 = __importDefault(require("./ResultSuccess"));
-const ResultFail_1 = __importDefault(require("./ResultFail"));
+import React from 'react';
+import axios from 'axios';
+import PaginatedForm from './paginatedform/PaginatedForm';
+import UserDropdown from './UserDropdown';
+import ResultSuccess from './ResultSuccess';
+import ResultFail from './ResultFail';
 function LoggedInScreen() {
     const urlParams = new URLSearchParams(window.location.search);
     let token = urlParams.get('token');
-    const [user, setUser] = react_1.default.useState(null);
-    const [newList, setNewList] = react_1.default.useState(null);
-    const [tracks, setTracks] = react_1.default.useState(null);
-    const [requestStatus, setRequestStatus] = react_1.default.useState(null);
-    react_1.default.useEffect(() => {
+    const [user, setUser] = React.useState(null);
+    const [newList, setNewList] = React.useState(null);
+    const [tracks, setTracks] = React.useState(null);
+    const [requestStatus, setRequestStatus] = React.useState(null);
+    React.useEffect(() => {
         if (token) {
-            (0, axios_1.default)({
+            axios({
                 method: 'GET',
                 url: 'http://localhost:5000/get-userdata',
                 // url: 'http://localhost:5000/get-userdata',
@@ -33,7 +28,7 @@ function LoggedInScreen() {
         }
     }, []);
     function mergePlaylists(formData) {
-        (0, axios_1.default)({
+        axios({
             method: 'GET',
             url: 'http://localhost:5000/merge-playlists',
             // url: 'http://localhost:5000/merge-playlists',
@@ -55,18 +50,18 @@ function LoggedInScreen() {
     }
     function renderScreen() {
         if (requestStatus == null) {
-            return (<PaginatedForm_1.default user={user} mergePlaylists={mergePlaylists}/>);
+            return (<PaginatedForm user={user} mergePlaylists={mergePlaylists}/>);
         }
         else if (tracks != null && newList != null) {
-            return (<ResultSuccess_1.default playlistInfo={newList} tracks={tracks} onReset={handleReset}/>);
+            return (<ResultSuccess playlistInfo={newList} tracks={tracks} onReset={handleReset}/>);
         }
         else {
-            return (<ResultFail_1.default />);
+            return (<ResultFail />);
         }
     }
     if (user) {
         return (<div className='logged-in'>
-                <UserDropdown_1.default username={user.displayName} userID={user.userID}/>
+                <UserDropdown username={user.displayName} userID={user.userID}/>
                 {renderScreen()}
             </div>);
     }
@@ -74,4 +69,4 @@ function LoggedInScreen() {
         return <></>;
     }
 }
-exports.default = LoggedInScreen;
+export default LoggedInScreen;

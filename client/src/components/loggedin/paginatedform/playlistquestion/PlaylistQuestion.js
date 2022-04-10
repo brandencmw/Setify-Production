@@ -1,26 +1,21 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
-const FormButton_1 = __importDefault(require("../FormButton"));
-const PlusIcon_svg_1 = __importDefault(require("../../../../assets/images/PlusIcon.svg"));
-const LeftArrow_svg_1 = __importDefault(require("../../../../assets/images/LeftArrow.svg"));
-const RightArrow_svg_1 = __importDefault(require("../../../../assets/images/RightArrow.svg"));
-const PlaylistDropdown_1 = __importDefault(require("./PlaylistDropdown"));
-const axios_1 = __importDefault(require("axios"));
-const uuid_1 = require("uuid");
+import React from "react";
+import FormButton from "../FormButton";
+import PlusIcon from "../../../../assets/images/PlusIcon.svg";
+import LeftArrow from "../../../../assets/images/LeftArrow.svg";
+import RightArrow from "../../../../assets/images/RightArrow.svg";
+import PlaylistDropdown from "./PlaylistDropdown";
+import axios from "axios";
+import { v4 as uuid4 } from "uuid";
 function PlaylistQuestion(props) {
-    const [playlists, setPlaylists] = react_1.default.useState([]);
-    const [selectedLists, setSelected] = react_1.default.useState([]);
+    const [playlists, setPlaylists] = React.useState([]);
+    const [selectedLists, setSelected] = React.useState([]);
     function addDropdown() {
         if (selectedLists.length < 5) {
             setSelected((previousList) => {
-                let id = (0, uuid_1.v4)();
+                let id = uuid4();
                 return [
                     ...previousList,
-                    <PlaylistDropdown_1.default playlists={playlists} selectID={id} key={id} value="" onRemove={removeDropdown} onChange={props.onChange}/>,
+                    <PlaylistDropdown playlists={playlists} selectID={id} key={id} value="" onRemove={removeDropdown} onChange={props.onChange}/>,
                 ];
             });
         }
@@ -47,8 +42,8 @@ function PlaylistQuestion(props) {
             }
         }
     }
-    react_1.default.useEffect(() => {
-        (0, axios_1.default)({
+    React.useEffect(() => {
+        axios({
             method: "GET",
             url: "http://localhost:5000/get-playlists",
             // url: 'http://localhost:5000/get-playlists',
@@ -66,17 +61,17 @@ function PlaylistQuestion(props) {
     if (playlists.length > 0 && selectedLists.length === 0) {
         let initialDropdowns = [];
         props.formData.playlists.forEach((playlist) => {
-            initialDropdowns.push(<PlaylistDropdown_1.default playlists={playlists} selectID={playlist.selectID} key={playlist.selectID} value={playlist.playlistID} onRemove={removeDropdown} onChange={props.onChange}/>);
+            initialDropdowns.push(<PlaylistDropdown playlists={playlists} selectID={playlist.selectID} key={playlist.selectID} value={playlist.playlistID} onRemove={removeDropdown} onChange={props.onChange}/>);
         });
         for (let i = 0; i < 2 - props.formData.playlists.length; i++) {
-            let id = (0, uuid_1.v4)();
-            initialDropdowns.push(<PlaylistDropdown_1.default playlists={playlists} selectID={id} key={id} value="" onRemove={removeDropdown} onChange={props.onChange}/>);
+            let id = uuid4();
+            initialDropdowns.push(<PlaylistDropdown playlists={playlists} selectID={id} key={id} value="" onRemove={removeDropdown} onChange={props.onChange}/>);
         }
         addExistingDropdowns(initialDropdowns);
     }
     function renderAdd() {
         if (selectedLists.length < 5) {
-            return (<FormButton_1.default text="" iconLoc="left" icon={PlusIcon_svg_1.default} onClick={addDropdown} buttonID={null}/>);
+            return (<FormButton text="" iconLoc="left" icon={PlusIcon} onClick={addDropdown} buttonID={null}/>);
         }
     }
     return (<div className="playlist-question">
@@ -91,10 +86,10 @@ function PlaylistQuestion(props) {
             }
         })}
       <div className="button-panel">
-        <FormButton_1.default text="Previous" iconLoc="left" icon={LeftArrow_svg_1.default} onClick={props.onPrev} buttonID={null}/>
+        <FormButton text="Previous" iconLoc="left" icon={LeftArrow} onClick={props.onPrev} buttonID={null}/>
         {renderAdd()}
-        <FormButton_1.default text="Merge" iconLoc="right" icon={RightArrow_svg_1.default} onClick={props.onMerge} buttonID={null}/>
+        <FormButton text="Merge" iconLoc="right" icon={RightArrow} onClick={props.onMerge} buttonID={null}/>
       </div>
     </div>);
 }
-exports.default = PlaylistQuestion;
+export default PlaylistQuestion;
