@@ -64,7 +64,7 @@ function PlaylistQuestion(props: playlistQProps) {
   React.useEffect(() => {
     axios({
       method: "GET",
-      url: "http://localhost:5000/get-playlists",
+      url: "https://setify-merger.herokuapp.com/get-playlists",
       // url: 'http://localhost:5000/get-playlists',
       headers: {
         User: props.user.userID,

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dab41509.css",
-    "main.js": "/static/js/main.853d05e0.js",
+    "main.js": "/static/js/main.a5ac0894.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/PlusJakartaSans-Bold.ttf": "/static/media/PlusJakartaSans-Bold.669b6c5749b91789cee5.ttf",
     "static/media/PlusJakartaSans-ExtraLight.ttf": "/static/media/PlusJakartaSans-ExtraLight.9fa24a4450c3307f58da.ttf",
@@ -13,11 +13,11 @@
     "static/media/NextIcon.svg": "/static/media/NextIcon.b70977b173bbecab618e79aa1b69b803.svg",
     "static/media/RightArrow.svg": "/static/media/RightArrow.b70977b173bbecab618e79aa1b69b803.svg",
     "main.dab41509.css.map": "/static/css/main.dab41509.css.map",
-    "main.853d05e0.js.map": "/static/js/main.853d05e0.js.map",
+    "main.a5ac0894.js.map": "/static/js/main.a5ac0894.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dab41509.css",
-    "static/js/main.853d05e0.js"
+    "static/js/main.a5ac0894.js"
   ]
 }
